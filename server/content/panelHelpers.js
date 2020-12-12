@@ -41,6 +41,9 @@ window.initPanelData = function () {
         var selectBestForExpeditedShippings_elem = window._content_panel_divContainerElem.querySelector("#sr-helper-kerem-panel input#selectBestForExpeditedShippings");
         selectBestForExpeditedShippings_elem.checked = window.current_c_data.selectBestForExpeditedShippings;
         
+        var isExtensionPaused_elem = window._content_panel_divContainerElem.querySelector("#sr-helper-kerem-panel input#isExtensionPaused");
+        isExtensionPaused_elem.checked = window.current_c_data.isExtensionPaused;
+        
         var estimated_total_treeshold_elem = window._content_panel_divContainerElem.querySelector("#sr-helper-kerem-panel input#estimated_total_treeshold");
         estimated_total_treeshold_elem.value = window.current_c_data.estimated_total_treeshold;
         
@@ -58,6 +61,9 @@ window.addPanelListeners = function () {
 
         var selectBestForExpeditedShippings_elem = window._content_panel_divContainerElem.querySelector("#sr-helper-kerem-panel input#selectBestForExpeditedShippings");
         window.current_c_data.selectBestForExpeditedShippings = selectBestForExpeditedShippings_elem.checked;
+        
+        var isExtensionPaused_elem = window._content_panel_divContainerElem.querySelector("#sr-helper-kerem-panel input#isExtensionPaused");
+        window.current_c_data.isExtensionPaused = isExtensionPaused_elem.checked;
 
         var estimated_total_treeshold_elem = window._content_panel_divContainerElem.querySelector("#sr-helper-kerem-panel input#estimated_total_treeshold");
         window.current_c_data.estimated_total_treeshold = parseFloat(estimated_total_treeshold_elem.value);

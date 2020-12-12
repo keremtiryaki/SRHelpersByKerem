@@ -4,7 +4,7 @@ window.handlePlaceOrder = function () {
         var elem = document.querySelector("body > x-sellerrunning").shadowRoot.querySelector("#sllrrnng-extension-alert-container > div > p:nth-child(1)");
         console.log("elem", elem)
         console.log("elem.innerText", elem.innerText)
-        if (elem && 
+        if (elem &&
             (
                 elem.innerText === "Sipariş ayrıntılarınızı gözden geçirin ve siparişinizi tamamlayın." ||
                 elem.innerText === "Review your order details and complete your order."
@@ -39,6 +39,11 @@ window.handlePlaceOrder = function () {
                     }
                 }
             }, 3000);
+        } else {
+            console.log("will try again")
+            setTimeout(function () {
+                window.handlePlaceOrder();
+            }, 5000);
         }
     }, 2000);
 }

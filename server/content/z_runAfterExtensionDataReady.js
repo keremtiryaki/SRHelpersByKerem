@@ -1,4 +1,9 @@
 window.runAfterExtensionDataReady = function () {
+    if(window.current_c_data.isExtensionPaused){
+        console.log('paused');
+        return;
+    }
+    
     if (window.location.href.indexOf(window.MAIN_SERIAL_LINK) === 0) {
         window.serialAutoStartNowFunction()
     }
