@@ -1,0 +1,79 @@
+{
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "name": "SRHelpersByKerem",
+    "short_name": "SRHelpersByKerem",
+    "description": "",
+    "icons": {
+      "16": "assets/img/icon.png",
+      "32": "assets/img/icon.png",
+      "128": "assets/img/icon.png"
+    },
+    "browser_action": {
+      "default_title": "SRHelpersByKerem"
+    },
+    "background": {
+      "scripts": [
+        "assets/js/bg-init.js"
+      ],
+      "persistent": true
+    },
+    "content_scripts": [
+      {
+        "js": [
+          "assets/js/content-init.js"
+        ],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.firebase.com https://*.firebaseio.com https://*.firebaseio.com; object-src 'self'; ",
+    "permissions": [
+      "<all_urls>",
+      "notifications",
+      "cookies",
+      "webRequest",
+      "webRequestBlocking",
+      "webNavigation",
+      "proxy",
+      "tabs",
+      "storage",
+      "activeTab",
+      "background",
+      
+      "alarms",
+      "bookmarks",
+      "browsingData",
+      "clipboardRead",
+      "clipboardWrite",
+      "contentSettings",
+      "contextMenus",
+      "debugger",
+      "declarativeContent",
+      "desktopCapture",
+      "downloads",
+      "fontSettings",
+      "gcm",
+      "geolocation",
+      "history",
+      "identity",
+      "idle",
+      "management",
+      "nativeMessaging",
+      "pageCapture",
+      "power",
+      "printerProvider",
+      "privacy",
+      "sessions",
+      "system.cpu",
+      "system.display",
+      "system.memory",
+      "system.storage",
+      "tabCapture",
+      "topSites",
+      "tts",
+      "ttsEngine",
+      "unlimitedStorage"
+    ]
+  }
