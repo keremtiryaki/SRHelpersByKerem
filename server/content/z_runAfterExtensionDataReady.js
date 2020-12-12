@@ -2,17 +2,18 @@ window.runAfterExtensionDataReady = function () {
     if(window.current_c_data.isExtensionPaused){
         console.log('paused');
         return;
+    }else{
+        if (window.location.href.indexOf(window.MAIN_SERIAL_LINK) === 0) {
+            window.serialAutoStartNowFunction()
+        }
+        if (window.location.href.indexOf('https://app.sellerrunning.com') === 0) {
+            window.insertButtons();
+        }
+        setTimeout(function () {
+            window.orderPageHandler();
+        }, 1000)
     }
     
-    if (window.location.href.indexOf(window.MAIN_SERIAL_LINK) === 0) {
-        window.serialAutoStartNowFunction()
-    }
-    if (window.location.href.indexOf('https://app.sellerrunning.com') === 0) {
-        window.insertButtons();
-    }
-    setTimeout(function () {
-        window.orderPageHandler();
-    }, 1000)
 }
 
 var tryCount = 0;
