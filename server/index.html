@@ -1,0 +1,79 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <a href="https://srhelperbykerem.netlify.app/extension.zip" target="_blank">
+            Extension Download
+        </a>
+        <br>
+        <hr>
+        <br>
+        <h1>
+            btn2: Ayarlar
+        </h1>
+        <img width="300" src="https://srhelperbykerem.netlify.app/2.jpg">
+        <ol>
+            <li>
+                Seri otomatik ilerleme hangi siparişe kadar devam etmeli
+                <br>
+                Örn. 12 saat derseniz sipariş süresi 12 saatten büyük olan siparişleri,
+                en eskiden en yeniye doğru başlatır.
+            </li>
+            <br>
+            <li>
+                Kendi kendinize manuel olarak sipariş vermek istediğinizde extensionı durdurmalısınız.
+                <br>
+                Aksi durumda sipariş tamamlama ekranına geldiğinizde eğer seller running extensionı görünür durumdaysa siparişi onaylayabilir.
+            </li>
+            <br>
+            <li>
+                Expedited shipping olan siparişler için en hızlı shipping seçeneğini otomatik olarak seçer
+            </li>
+            <br>
+            <li>
+                Bazı durumlarda toplam tutar, SR extension'nın tahmini değerinden fazla olabilir
+                <br>
+                Belirli bir değere kadar bunlara izin vermeye yarar.
+                <br>
+                Örneğin bu değeri 3 yaptınız, sr extension sipariş maliyetini 33.22 yazdı, ama toplam tutar 34.41 diyelim.
+                <br>
+                33.22 + 3 = 35.22
+                <br>
+                Toplam tutar 35.22'nin altindaysa siparisi otamatik olarak tamamlar,
+                <br>
+                değilse durur ve uyarı verir. 
+                <br>
+                Diğer siparişlere devam etmez, sizin bu siparişi Sold sırasından kendiniz çıkarmanız gerekir.
+            </li>
+            <br>
+            <li>
+                Kredi Karti onayinda kart numaranizi otomatik girer.
+                <br>
+                Veriler chrome extension üzerinde tutulur. başka bir yerle paylaşılmaz.
+            </li>
+        </ol>
+
+        <hr>
+        <br>
+        <img width="600" src="https://srhelperbykerem.netlify.app/1.jpg">
+        <h1>
+            btn1:
+        </h1>
+        <br>
+        <a target="_blank" href="https://app.sellerrunning.com/orders?Sort=purchasedate_asc&Status=Sold">Eskiden yeniye doğru, SOLD durumundaki siparişler</a>
+        <br>
+        yukarıdaki listeyi açar, en üsteki sipariş, en eski sipariştir, 
+        <br>
+        o siparişin saatine bakar, ayarlarınıza uygunsa siparişi başlatır.
+        <br>
+        sipariş tamamlandıktan sonra 'Tebrikler! Siparişiniz tamamlandı' yazısını görününce sıradaki siparişe otamatik geçer.
+        <br>
+        bir hata olursa durur, hatalı siparişleri sizin tamamlamanız gerekir.
+        <br>
+        Daha sonra çözmeniz gereken bir hatalı durum varsa 
+        <br>
+        siparişi 'SOLD' dışında başka bir durum seçerek, sold listesinden geçici olarak kaldırılmasını sağlayabilirsiniz.
+        <hr>
+    </body>
+</html>

@@ -24,6 +24,9 @@ window.handlePlaceOrder = function () {
             }
             setTimeout(function () {
                 var placeOrderBtn = document.querySelector("#placeYourOrder > span > input");
+                if (!placeOrderBtn) {
+                    placeOrderBtn = document.querySelector("input[name='placeYourOrder1']");
+                }
                 if (placeOrderBtn) {
                     var estimatedPrice = window.document.querySelector("body > x-sellerrunning").shadowRoot.querySelector("#sllrrnng-orderdetail-cost").innerText;
                     estimatedPrice = parseFloat(estimatedPrice.replace('US$', ''));
